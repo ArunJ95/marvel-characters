@@ -21,7 +21,7 @@ dependencies = [
 dynamic = ['version']
 
 [project.optional-dependencies]
-dev = ["databricks-connect>=16.0, <17",
+dev = [
        "ipykernel>=6.29.5, <7",
        "pip>=25.0.1, <26",
        "pre-commit>=4.1.0, <5"]
@@ -87,3 +87,11 @@ lint.ignore = [
 [tool.ruff.format]
 indent-style = "space"
 docstring-code-format = true
+
+[dependency-groups]
+dev = [
+    "databricks-connect~=18.0.0",
+]
+
+[tool.databricks.environment]
+environment_version = "5"
